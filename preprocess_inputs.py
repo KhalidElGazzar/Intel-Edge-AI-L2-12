@@ -12,13 +12,7 @@ def pose_estimation(input_image):
 
     # TODO: Preprocess the image for the pose estimation model
     
-    width = 456
-    height = 256
-    
-    preprocessed_image = cv2.resize(input_image, (width, height))
-    preprocessed_image = preprocessed_image.transpose((2,0,1))
-    preprocessed_image = preprocessed_image.reshape(1, 3, height, width)
-    
+
     return preprocessed_image
 
 
@@ -32,14 +26,7 @@ def text_detection(input_image):
     preprocessed_image = np.copy(input_image)
 
     # TODO: Preprocess the image for the text detection model
-    width = 1280
-    height = 768
-    
-    preprocessed_image = cv2.resize(input_image, (width, height))
-    preprocessed_image = preprocessed_image.transpose((2,0,1))
-    preprocessed_image = preprocessed_image.reshape(1, 3, height, width)
-    
-    return preprocessed_image
+
 
     return preprocessed_image
 
@@ -55,12 +42,6 @@ def car_meta(input_image):
 
     # TODO: Preprocess the image for the car metadata model
     
-    width = 72
-    height = 72
-    
-    preprocessed_image = cv2.resize(input_image, (width, height))
-    preprocessed_image = preprocessed_image.transpose((2,0,1))
-    preprocessed_image = preprocessed_image.reshape(1, 3, height, width)
-    
+
 
     return preprocessed_image
